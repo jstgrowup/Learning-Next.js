@@ -1,12 +1,9 @@
 import React from 'react'
 
 function About() {
-    return (
-
-        <div>
-            app.js
-        </div>
-    )
+  return (
+    <div>About</div>
+  )
 }
 
 export default About

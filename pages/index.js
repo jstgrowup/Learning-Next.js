@@ -1,6 +1,7 @@
 import Head from 'next/head'
 // head is for the page head or the website head just like in the HTML
 import Image from 'next/image'
+import Link from 'next/link'
 // Image provides us optimized images by Next js it will load lazy images will only load when they are in the view port 
 import Script from 'next/script'
 import styles from '../styles/Home.module.css'
@@ -22,7 +23,26 @@ export default function Home() {
         <Image>
 
         </Image>
-     
+        <nav className={styles.nav}>
+          <ul  >
+            <Link href={"/"}>
+              <li>Home</li>
+            </Link>
+            <Link href={"/about"}>
+              <li>About</li>
+            </Link>
+            <Link href={"/blog"}>
+              <li>Blog</li>
+            </Link>
+            <Link href={"/contact"}>
+              <li>Contact</li>
+            </Link>
+          </ul>
+        </nav>
+
+
+
+
 
         <main className={styles.main}>
           <h1 className={styles.title}>

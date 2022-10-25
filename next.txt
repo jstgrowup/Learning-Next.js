@@ -1,0 +1,6 @@
+Link tag in Next
+difference between the a tag and the NEXt link component anchor tag reload the page whaereas the Link component in the Next js doesnt
+--> https://nextjs.org/docs/api-reference/next/link
+
+
+Different CSS in different components
