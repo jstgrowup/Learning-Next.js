@@ -4,3 +4,28 @@ difference between the a tag and the NEXt link component anchor tag reload the p
 
 
 Different CSS in different components
+any global CSS will be imported into _app.js 
+if the cSS is component level than we will write module.css else we write the global CSS
+-----------------------------------------
+Styled JSX
+this is component level css the scope is component level only
+ <style jsx>
+          {
+            `
+  .mySpan{
+    color:red
+  }
+  `
+          }
+        </style>
+
+if you want your css to be global than 
+ <style jsx global>
+          {
+            `
+  .mySpan{
+    color:red
+  }
+  `
+          }
+        </style>
