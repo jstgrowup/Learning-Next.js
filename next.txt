@@ -29,3 +29,8 @@ if you want your css to be global than
   `
           }
         </style>
+no setup for server side rendering so its easy to work on NEXT js 
+easy concepts of page creation internal routing and for routing we dont have to do any configurations 
+we just add files to the pages folder --> file system routing no preloading of unnecessary data while clicking on the link 
+Dynamic routing --> [id].js
+because the code is not there in the page source thats why it doesnt provides better SEO in the react apps 

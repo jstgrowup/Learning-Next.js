@@ -5,7 +5,7 @@ import Link from 'next/link'
 // Image provides us optimized images by Next js it will load lazy images will only load when they are in the view port 
 import Script from 'next/script'
 import styles from '../styles/Home.module.css'
-import StyledJSX from './StyledJSX'
+
 
 export default function Home() {
   return (
@@ -20,19 +20,19 @@ export default function Home() {
           <link rel="icon" href="/favicon.ico" />
           {/* here we can add script as well you can also use script component given by NEXT js it is basically an extension of HTML script tag*/}
         </Head>
-        <Script strategy='lazyOnload' src='./text.js'>
+        {/* <Script strategy='lazyOnload' src='./text.js'> */}
           {/* https://nextjs.org/docs/basic-features/script */}
 
-        </Script>
-        <Image>
+        {/* </Script> */}
+        {/* <Image>
 
-        </Image>
+        </Image> */}
       
         <Image  className={styles.myImg} src="/coderImg.avif" width={"237"} height={"158"}/>
         <main className={styles.main}>
         <div className={styles.imagewrap}>
           {/* <Image className={styles.myImg} src="/homeimg.jfif" width={237} height={158}/> */}
-          <img className={styles.myImg} src="/homeimg.jfif" width={237} height={158} alt="hunting coder" />
+          {/* <img className={styles.myImg} src="/homeimg.jfif" width={237} height={158} alt="hunting coder" /> */}
         </div>
         <h1 className={styles.title}>
           <span className='dummy'>&lt;HuntingCoder/&gt;</span>
