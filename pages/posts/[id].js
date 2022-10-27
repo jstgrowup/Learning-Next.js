@@ -1,8 +1,8 @@
 const Post = ({ post }) => {
     return <p>Post: {post.title}</p>
 }
-export async function getServerSideProps({ query }) {
-    console.log(query);
+export async function  getStaticProps({ query }) {
+    // console.log(query);
     const { id } = query
     // Fetch data from external API
     const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
