@@ -1,6 +1,7 @@
 
 import Link from 'next/link'
 import React from 'react'
+import PostsComponent from './components/PostsComponent'
 
 
 export default function Posts({posts}) {
@@ -12,13 +13,8 @@ export default function Posts({posts}) {
                 {
                     posts.map((el) => {
                         return <li key={el.id}>
-                            <h3 >
-                                <Link href={`/posts/[id]`} as={`/posts/${el.id}`}>
-                                    <a> {el.title}</a>
-                                </Link>
-
-                            </h3>
-                            <h3>{el.body}</h3>
+                             <PostsComponent {...el}/>
+                           
                         </li>
                     })
                 }
@@ -26,24 +22,24 @@ export default function Posts({posts}) {
         </div>
     )
 }
-// export async function getStaticProps() {
+export async function getStaticProps() {
    
-//     const res = await fetch('https://jsonplaceholder.typicode.com/posts')
-//     const posts = await res.json()
-
-   
-//     return {
-//         props: {
-//             posts,
-//         },
-//     }
-// }
-
-export async function getServerSideProps() {
-    // Fetch data from external API
-    const res = await fetch(`https://jsonplaceholder.typicode.com/posts`)
+    const res = await fetch('https://jsonplaceholder.typicode.com/posts')
     const posts = await res.json()
+
+   
+    return {
+        props: {
+            posts,
+        },
+    }
+}
+
+// export async function getServerSideProps() {
+//     // Fetch data from external API
+//     const res = await fetch(`https://jsonplaceholder.typicode.com/posts`)
+//     const posts = await res.json()
   
-    // Pass data to the page via props
-    return { props: { posts} }
-  }
+//     // Pass data to the page via props
+//     return { props: { posts} }
+//   }

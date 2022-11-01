@@ -14,7 +14,9 @@ a {
 * {
   box-sizing: border-box;
 }
-
+ul{
+  list-style-type: none;
+}
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -22,6 +24,6 @@ a {
 
   body {
     color: black;
-    background-color: white;
+    background-color: red;
   }
 }
