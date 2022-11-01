@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 function ImageCompo() {
+    console.log(process.env.API_BASE_URL);
     return (
         <>
             <Image src={"/images/posts/1.jpg"}
